@@ -1,0 +1,58 @@
+﻿@model MyFirstProjectWebApp.Models.AppointmentModel
+
+@{
+    ViewData["Title"] = "Book Appointment";
+}
+<center>
+    <h1 class="display-4">Book Appointment</h1>
+    <hr />
+    <div class="img">
+        <img src="~/img/appointmentBanner1.png" alt="" />
+    </div>
+    <hr />
+    <div class="row tableCentre">
+        <div class="col-md-4">
+            <form asp-action="Details">
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-group">
+                    <label asp-for="PatientName" class="control-label"></label>
+                    <input asp-for="PatientName" class="form-control" />
+                    <span asp-validation-for="PatientName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="AppointmentDate" class="control-label"></label>
+                    <input asp-for="AppointmentDate" class="form-control" />
+                    <span asp-validation-for="AppointmentDate" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PatientNetWorth" class="control-label"></label>
+                    <input asp-for="PatientNetWorth" class="form-control" />
+                    <span asp-validation-for="PatientNetWorth" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="DoctorName" class="control-label"></label>
+                    <input asp-for="DoctorName" class="form-control" />
+                    <span asp-validation-for="DoctorName" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="PainLevel" class="control-label"></label>
+                    <input asp-for="PainLevel" class="form-control" />
+                    <span asp-validation-for="PainLevel" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Create" class="btn btn-primary" />
+                </div>
+            </form>
+        </div>
+    </div>
+    <hr />
+    <div>
+        <a asp-action="Index">View appointments...</a>
+    </div>
+
+
+
+    @section Scripts {
+        @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
+</center>

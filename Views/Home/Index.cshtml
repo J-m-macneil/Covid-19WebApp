@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<header>
+    <div class="text-top">
+        <h1 class="display-4">Coronavirus (COVID-19)</h1>
+        </div>
+        <hr />
+</header>
+<body>
+<div class="img">
+    <img src="~/img/covidBanner1.png" alt="" />
+</div>
+<div class="text-center">
+    <p>
+        Click here for important information about the coronavirus (COVID-19)
+        <a asp-controller="CovidInfo" asp-action="Index">More information...</a>
+    </p>
+    <hr />
+</div>
+    <p></p>
+    <div class="text-top">
+        <h1 class="display-4">How to take a COVID-19 self-test swab</h1>
+        <hr />
+    </div>
+
+
+    <div class="video">
+        <video src="~/video/covidVideo.mp4" controls />
+    </div>
+    <hr />
+</body>
